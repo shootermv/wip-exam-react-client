@@ -30,7 +30,7 @@ class App extends Component {
     if ( this.state.name.trim() === '' || !this.state.age ) { return; }
     this.reload = true;
 
-    fetch('http://35.193.228.95:4000/users', {
+    fetch(`${process.env.REACT_APP_API_HOST}/users`, {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
