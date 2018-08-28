@@ -12,7 +12,7 @@ export class Users extends Component {
   }
 
   fetchUsers() {
-    fetch('http://35.193.228.95:4000/users')
+    fetch(`${process.env.REACT_APP_API_HOST}/users`)
     .then(response=>response.json())
     .then(users=>{
         this.setState({users});
